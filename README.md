@@ -42,7 +42,7 @@ module.exports = {
 };
 ```
 
-Passing special TagName to vue-loader.options.loaders.md params. like balabal. default is Markdown
+Passing special TagName to `vue-loader.options.loaders.md` params. like `tag=balabala`. default is `tag=Markdown`
 
 `file.vue`:
 
