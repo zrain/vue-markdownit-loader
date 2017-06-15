@@ -1,7 +1,7 @@
 {
   "name": "vue-markdownit-loader",
   "version": "1.0.0",
-  "description": "",
+  "description": "Webpack loader to translate markdown to HTML using markdownit.",
   "main": "index.js",
   "directories": {
     "example": "example"
@@ -14,7 +14,15 @@
     "type": "git",
     "url": "git+https://github.com/zrain/vue-markdownit-loader.git"
   },
-  "author": "zrainma@sina.com",
+  "keywords": [
+    "markdown",
+    "webpack",
+    "loader",
+    "webpack-loader",
+    "markdown-it",
+    "markdown-it-plugin"
+  ],
+  "author": "zrain <zrainma@sina.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/zrain/vue-markdownit-loader/issues"
