@@ -21,7 +21,6 @@
   },
   "homepage": "https://github.com/zrain/vue-markdownit-loader#readme",
   "dependencies": {
-    "github-markdown-css": "^2.8.0",
     "highlight.js": "^9.12.0",
     "loader-utils": "^1.1.0",
     "markdown-it": "^8.3.1"
@@ -32,6 +31,7 @@
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-es2015": "^6.24.1",
     "css-loader": "^0.28.4",
+    "github-markdown-css": "^2.8.0",
     "raw-loader": "^0.5.1",
     "style-loader": "^0.18.2",
     "vue": "^2.3.4",
