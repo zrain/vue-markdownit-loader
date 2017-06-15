@@ -19,6 +19,10 @@ npm i vue-markdownit-loader --save-dev
 
 `引入 github-markdown-css 样式并加载它`
 
+```bash
+npm i github-markdown-css --save
+```
+
 ```javascript
   import 'github-markdown-css'
 ```
