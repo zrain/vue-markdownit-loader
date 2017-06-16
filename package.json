@@ -1,6 +1,6 @@
 {
   "name": "vue-markdownit-loader",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Webpack loader to translate markdown to HTML using markdownit.",
   "main": "index.js",
   "directories": {
