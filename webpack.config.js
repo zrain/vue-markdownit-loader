@@ -19,7 +19,7 @@ module.exports = {
 			loader: 'vue-loader',
 			options: {
 				loaders: {
-					md: path.resolve(__dirname, './index.js') + "?tag=balabala"
+					md: path.resolve(__dirname, './index.js') + "?tag=Markdown"
 				}
 			}
 		}, {

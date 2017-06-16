@@ -4,7 +4,16 @@
         <div v-html="md"></div>
     </div> -->
     <div>
-      <balabala>
+
+      <Markdown>
+        ```html
+          <div>
+            <p>水平的顶部导航菜单。</p>
+          </div>
+        ```
+      </Markdown>
+
+      <Markdown>
         > This is test1.
 
         # Hello
@@ -54,12 +63,12 @@
         ```html
         <compo>{{model }}{{model }}{{model }}{{model }}{{ model }}</compo>
         ```
-      </balabala>
+      </Markdown>
       <p @click="mode = !mode">
         {{mode}}
-        <balabala>
+        <Markdown>
           > This is inner.
-        </balabala>
+        </Markdown>
       </p>
     </div>
 </template>
