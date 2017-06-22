@@ -20,7 +20,13 @@
     "loader",
     "webpack-loader",
     "markdown-it",
-    "markdown-it-plugin"
+    "markdown-it-plugin",
+    "vue",
+    "vue-template",
+    "vue-template-loader",
+    "vue-loader",
+    "vue-markdown-loader",
+    "vue-markdownit-loader"
   ],
   "author": "zrain <zrainma@sina.com>",
   "license": "ISC",
