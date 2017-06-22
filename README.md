@@ -1,97 +1,97 @@
 # vue-markdownit-loader
 
-> Convert Markdown file to HTML using markdown-it.
-
 > 支持在 vue template 模版中使用 markdown 语法
 
-## Installation
+## 安装
 
 ```bash
-npm i vue-markdownit-loader --save-dev
+npm install vue-markdownit-loader --save-dev
 ```
 
-## Features
+## 特征
 - Hot reload
-- Code highlighting using highlight.js
+- 使用 Hightlight 语法高亮
+- 支持嵌套标签的方式使用
 
-## Usage
+## 使用方式
 [Documentation: Using loaders](http://webpack.github.io/docs/using-loaders.html)
 
-`引入 github-markdown-css 样式并加载它`
+`安装并引入你喜欢的 markdown 样式文件，这里以 github-markdown-css 为例`
 
 ```bash
-npm i github-markdown-css --save
+npm install github-markdown-css --save
 ```
 
 ```javascript
-  import 'github-markdown-css'
+import 'github-markdown-css'
 ```
+
+`如果你要使用 highlight.js 高亮语法，也要引入 highlight.js/styles/github.css`
+[HightLight Styles](https://highlightjs.org/static/demo/)
 
 `webpack.config.js` file (webpack 2.x):
 
 ```javascript
 module.exports = {
   module: {
-    rules: [
-    	{
-    		test: /\.vue$/,
-    		loader: 'vue-loader',
-    		options: {
-    			loaders: {
-    				md: path.resolve(__dirname, './index.js') + "?tag=balabala"
-    			}
-    		}
-    	},
-    	{
-      		test: /\.md/,
-      		loader: 'vue-markdownit-loader'
-    	},
-
-    ]
+    rules: [{
+      test: /\.vue$/,
+      loader: 'vue-loader',
+      options: {
+        loaders: {
+          md: "vue-markdownit-loader"
+        }
+      }
+    },{
+        test: /\.md/,
+        loader: 'vue-markdownit-loader'
+    }]
   }
 };
 ```
-
-Passing special TagName to `vue-loader.options.loaders.md` params. like `tag=balabala`. default is `tag=Markdown`
-
-你可以传一个特殊的标签名字给 `vue-loader.options.loaders.md` 的params. 例子：`tag=balabala`。默认的是 `tag=Markdown`；
-这个标签面子要唯一，不要跟HTML或者你的 vue component 组件名字冲突。
-
-`file.vue`:
+`xxxx.vue`
 
 ```html
 <template lang="md">
-	<Markdown>
-		markdown text
-	</Markdown>
-	<VueComponent>
-		<VueComponent>
-		</VueComponent>
-		<Markdown>
-			markdown text
-		</Markdown>
-	</VueComponent>>
+  <div class="wrapper">
+    <Markdown>
+      markdown text
+    </Markdown>
+    <VueComponent>
+      <VueComponent>
+      </VueComponent>
+      <Markdown>
+        markdown text
+      </Markdown>
+    </VueComponent>>
+  </div>
 </template>
 ```
-or 
 
-```html
-<template lang="md">
-	<balabala>
-		markdown content
-	</balabala>
-	<VueComponent>
-		<VueComponent>
-		</VueComponent>
-		<balabala>
-			markdown content
-		</balabala>
-	</VueComponent>>
-</template>
-```
-如果你要使用 highlight.js 高亮语法，记得引用它们的样式
+### Passing options to vue-markdownit-loader
+
+* 可以传 tagName 给 vue-markdownit-loader,它将解析 <tagName></tagName> 内的 markdown文本
+  默认值：Markdown
+* 可以传 tab=[number] 给 vue-markdownit-loader,它将所有缩进解析为指定的空格数量
+  默认值：2
+
 ```javascript
-  import 'highlight.js/styles/github.css'
+module.exports = {
+  module: {
+    rules: [{
+      test: /\.vue$/,
+      loader: 'vue-loader',
+      options: {
+        loaders: {
+          md: "vue-markdownit-loader?tagName=Markdown&tab=2"
+        }
+      }
+    },{
+        test: /\.md/,
+        loader: 'vue-markdownit-loader'
+    }]
+  }
+};
 ```
 
 ### Passing options to vue-markdown-it
@@ -170,6 +170,3 @@ module.exports = {
 ## Thanks
 
 @BlueOakJS https://github.com/BlueOakJS/markdownit-loader
-
-## License
-MIT
