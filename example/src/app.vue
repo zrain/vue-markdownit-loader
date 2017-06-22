@@ -19,6 +19,9 @@
 				<li>
 					<router-link to="/example2">/example2</router-link>
 				</li>
+				<li>
+					<router-link to="/example2">/example3</router-link>
+				</li>
 			</ul>
 		</div>
 		<div class="content">

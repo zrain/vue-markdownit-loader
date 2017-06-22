@@ -4,6 +4,7 @@ import App from './src/app.vue';
 
 import Example1 from './src/example.vue';
 import Example2 from './src/example2.vue';
+import Example3 from './src/example3.vue';
 
 import 'highlight.js/styles/github.css'
 import 'github-markdown-css'
@@ -19,6 +20,10 @@ const router = new VueRouter({
 		{
 			path: '/example2',
 			component: Example2
+		},
+		{
+			path: '/example3',
+			component: Example3
 		},
 	]
 });
